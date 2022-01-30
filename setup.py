@@ -8,7 +8,7 @@ setup(
     url='https://takpikamcs.pgw.jp',
     author='takpika',
     author_email='contact@takpikamcs.pgw.jp',
-    license='none',
+    license='mit',
     classifiers=[
     ],
     keywords='pokemon',
