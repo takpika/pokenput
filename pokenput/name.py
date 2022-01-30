@@ -5,8 +5,8 @@ def checkName(name):
             available = False
             for i in range(len(kana_chars)):
                 if char in kana_chars[i] or char in hira_chars[i]:
-                    return False
-    return True
+                    return True
+    return False
 
 def convertName(name):
     name = name.replace(" ", "　")
