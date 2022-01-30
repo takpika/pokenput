@@ -12,5 +12,5 @@ setup(
     classifiers=[
     ],
     keywords='pokemon',
-    install_requires=["pyautogui", "time"],
+    install_requires=["pyautogui"],
 )
