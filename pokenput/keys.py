@@ -1,7 +1,7 @@
 import pyautogui
 from time import sleep
 
-from name import *
+from .name import *
 
 KEY_UP = "up"
 KEY_DOWN = "down"

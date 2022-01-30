@@ -1,4 +1,4 @@
-from chars import *
+from .chars import *
 
 def checkName(name):
     for char in name:
