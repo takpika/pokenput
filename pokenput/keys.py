@@ -58,9 +58,9 @@ class keys():
             KanaHira = checkKanaHira(name[i])
             if KanaHira == 'error':
                 break
-            if mode != KanaHira and (not name[i] in same_chars):
+            if self.mode != KanaHira and (not name[i] in same_chars):
                 self.moveCursor(0, 6)
-                mode = KanaHira
+                self.mode = KanaHira
             Pos = checkPos(name[i])
             if Pos == (-1, -1):
                 break
