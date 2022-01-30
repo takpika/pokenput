@@ -9,7 +9,7 @@ class keys():
         self.KEY_DOWN = "down"
         self.KEY_LEFT = "left"
         self.KEY_RIGHT = "right"
-        self.START = "enter"
+        self.KEY_START = "enter"
         self.KEY_A = "z"
         self.KEY_B = "x"
         self.mode = "kana"
@@ -85,4 +85,4 @@ class keys():
                         self.x = 8
                         self.y = 5
                     self.moveCursor(5, 5)
-        self.keyPress(self.START)
+        self.keyPress(self.KEY_START)
