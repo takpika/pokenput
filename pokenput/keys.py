@@ -51,6 +51,9 @@ class keys():
         self.keyPress(self.KEY_A)
 
     def inputName(self, name):
+        self.mode = "kana"
+        self.x = 0
+        self.y = 0
         for i in range(len(name)):
             KanaHira = checkKanaHira(name[i])
             if KanaHira == 'error':
