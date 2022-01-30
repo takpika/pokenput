@@ -70,19 +70,19 @@ class keys():
                 if Pos[0] > 8 and Pos[0] < 12:
                     self.moveCursor(Pos[0] - 8, Pos[1])
                     if i == 4:
-                        x = 8
-                        y = 5
+                        self.x = 8
+                        self.y = 5
                     self.moveCursor(4, 5)
                 elif Pos[0] == 12:
                     self.moveCursor(5, Pos[1])
                     if i == 4:
-                        x = 8
-                        y = 5
+                        self.x = 8
+                        self.y = 5
                     self.moveCursor(4, 5)
                 elif Pos[0] == 13:
                     self.moveCursor(5, Pos[1])
                     if i == 4:
-                        x = 8
-                        y = 5
+                        self.x = 8
+                        self.y = 5
                     self.moveCursor(5, 5)
         self.keyPress(self.START)
