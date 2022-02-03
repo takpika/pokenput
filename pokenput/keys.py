@@ -70,7 +70,7 @@ class keys():
             if self.mode != KanaHira and (not name[i] in nm.same_chars):
                 self.moveCursor(0, 6)
                 self.mode = KanaHira
-            Pos = name.checkPos(name[i])
+            Pos = nm.checkPos(name[i])
             if Pos == (-1, -1):
                 break
             if Pos[0] < 9:
