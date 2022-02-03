@@ -40,18 +40,18 @@ class keys():
                 self.keyPress(self.KEY_DOWN)
         if dsty != 6:
             if (dstx < self.x):
-                if (self.x - dstx < (dstx+8) - self.x):
+                if (self.x - dstx < (dstx+9) - self.x):
                     for i in range(self.x - dstx):
                         self.keyPress(self.KEY_LEFT)
                 else:
-                    for i in range(dstx+8 - self.x):
+                    for i in range(dstx+9 - self.x):
                         self.keyPress(self.KEY_RIGHT)
             elif (dstx > self.x):
-                if (dstx - self.x < self.x - (dstx-8)):
+                if (dstx - self.x < self.x - (dstx-9)):
                     for i in range(dstx - self.x):
                         self.keyPress(self.KEY_RIGHT)
                 else:
-                    for i in range(self.x - (dstx-8)):
+                    for i in range(self.x - (dstx-9)):
                         self.keyPress(self.KEY_LEFT)
             self.x = dstx
         else:
