@@ -8,4 +8,4 @@
 **注意: 日本語のみです**
 
 ## 使い方
-関数`keys().inputName(name)`を呼び出すことで入力が実行されます。
+関数`pokenput.keys().inputName(name)`を呼び出すことで入力が実行されます。
