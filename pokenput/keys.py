@@ -1,10 +1,10 @@
 import pyautogui
 from time import sleep
 
-from .name import *
+from . import name
 
 class keys():
-    def __init__(self):
+    def __init__(self, version=1):
         self.KEY_UP = "up"
         self.KEY_DOWN = "down"
         self.KEY_LEFT = "left"
@@ -13,6 +13,7 @@ class keys():
         self.KEY_A = "z"
         self.KEY_B = "x"
         self.mode = "kana"
+        self.version = version
         self.x = 0
         self.y = 0
 
@@ -39,11 +40,19 @@ class keys():
                 self.keyPress(self.KEY_DOWN)
         if dsty != 6:
             if (dstx < self.x):
-                for i in range(self.x - dstx):
-                    self.keyPress(self.KEY_LEFT)
+                if (self.x - dstx < (dstx+8) - self.x):
+                    for i in range(self.x - dstx):
+                        self.keyPress(self.KEY_LEFT)
+                else:
+                    for i in range(dstx+8 - self.x):
+                        self.keyPress(self.KEY_RIGHT)
             elif (dstx > self.x):
-                for i in range(dstx - self.x):
-                    self.keyPress(self.KEY_RIGHT)
+                if (dstx - self.x < self.x - (dstx-8)):
+                    for i in range(dstx - self.x):
+                        self.keyPress(self.KEY_RIGHT)
+                else:
+                    for i in range(self.x - (dstx-8)):
+                        self.keyPress(self.KEY_LEFT)
             self.x = dstx
         else:
             self.x = 0
@@ -55,13 +64,13 @@ class keys():
         self.x = 0
         self.y = 0
         for i in range(len(name)):
-            KanaHira = checkKanaHira(name[i])
+            KanaHira = name.checkKanaHira(name[i])
             if KanaHira == 'error':
                 break
             if self.mode != KanaHira and (not name[i] in same_chars):
                 self.moveCursor(0, 6)
                 self.mode = KanaHira
-            Pos = checkPos(name[i])
+            Pos = name.checkPos(name[i])
             if Pos == (-1, -1):
                 break
             if Pos[0] < 9:
