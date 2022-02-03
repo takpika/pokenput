@@ -1,7 +1,7 @@
 import pyautogui
 from time import sleep
 
-from . import name
+from . import name as nm
 
 class keys():
     def __init__(self, version=1):
@@ -64,10 +64,10 @@ class keys():
         self.x = 0
         self.y = 0
         for i in range(len(name)):
-            KanaHira = name.checkKanaHira(name[i])
+            KanaHira = nm.checkKanaHira(name[i])
             if KanaHira == 'error':
                 break
-            if self.mode != KanaHira and (not name[i] in same_chars):
+            if self.mode != KanaHira and (not name[i] in nm.same_chars):
                 self.moveCursor(0, 6)
                 self.mode = KanaHira
             Pos = name.checkPos(name[i])
